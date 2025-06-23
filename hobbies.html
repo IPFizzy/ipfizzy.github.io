@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html lang="en">
+<!-- Sets page language -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsiveness -->
+    <title>Hobbies</title> <!-- Browser tab title -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Load Roboto font from Google Fonts -->
+</head>
+
+<body>
+    <!-- Title bar at top of the page -->
+    <div class="centered">
+        <h1 class="title">Keon Bushman's Hobbies</h1>
+    </div>
+
+    <!-- Navigation bar with internal anchor links -->
+    <nav class="navbar">
+        <a href="/index.html">About Me</a> <!-- Link to About Me page -->
+        <a href="/hobbies.html">Hobbies</a> <!-- Link to Hobbies page -->
+        <a href="#career">Career</a> <!-- Placeholder for future content -->
+        <a href="#projects">Projects</a> <!-- Placeholder for future content -->
+        <a href="#beliefs">Beliefs</a> <!-- Placeholder for future content -->
+        <a href="#contact">Contact</a> <!-- Placeholder for future content -->
+    </nav>
+
+    <!-- Flex container that holds the white hobby text and image side-by-side -->
+    <div class="about-flex">
+        <!-- White bubble containing hobby descriptions -->
+        <div class="about match-height">
+            <h2 class="header">Video Games</h2>
+            <p>Video Games have been a central part of my life for as long as I can remember. It all started when my
+                parents lended me my first Gameboy Advance when I was 3 years old and I have loved video games ever
+                since. To date, I have played and finished hundreds of games, and I have thousands more sitting in my
+                library waiting to be played. What started as my biggest hobby even turned into a profession in the form
+                of esports. I started competing in Fortnite tournaments at age 15 and actually did pretty good. I still
+                keep up with Fortnite esports today and compete in some other games too. Take a look at some of my
+                gaming achievements in the table below!</p>
+
+            <h2 class="header">Drums</h2>
+            <p>Simularly to Video Games, drumming has also always been a passion of mine. We even have family videos of
+                me banging on toy drums as a baby. I have been playing a drums off an on for over 10 years now, but
+                have really gotten serious about it in the last year or two. Aside from drums I have a passion for all
+                things music and especially love the band Twenty One Pilots (give them a listen!) so being able to play
+                to their music with my own instrument only adds to my love of music. Below is a video clip of me playing
+                the drums to Twenty One Pilots' song Lane Boy!</p>
+
+            <h2 class="header">Pickleball</h2>
+            <p>Pickleball is my newest hobby. If you haven't noticed already, I'm a bit of a nerdy type, and aside from
+                drumming, I didn't have much of an athletic hobby. I have bounced around tons of different sports growing
+                up and my favorite by far was Tennis. So when I learned there was an even more beginner friendly sport like Tennis
+                than I can play with family and all my friends were getting into, I also had to hop on the bandwagon. I
+                even competed in my first tournament with a friend of mine this year (that's where the picture on the
+                right came from)! Pickleball to date has become my all time favorite sport and something I plan on
+                keeping up with in my busy lifestyle.</p>
+        </div>
+
+        <!-- Static image aligned to right -->
+        <div class="image-wrapper">
+            <img src="images/IMG_2.png" alt="Keon adjusting his glasses playing Pickleball"> <!-- Hobby image -->
+        </div>
+    </div>
+
+    <!-- White bubble container holding the stats table and a video side by side -->
+    <div class="bubble full-width">
+        <!-- First half of layout: Game stats table -->
+        <div class="container">
+            <h2 class="header">Video Game Stats</h2> <!-- Section header -->
+            <!-- Table listing video game achievements -->
+            <table class="table">
+                <!-- Styled with .table class in style.css -->
+                <thead>
+                    <tr>
+                        <th>Game</th> <!-- Column for game title -->
+                        <th>Achievement</th> <!-- Column for achievement description -->
+                        <th>Year</th> <!-- Column for year achieved -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows showing table data -->
+                    <tr>
+                        <td>Fortnite</td>
+                        <td>Solo Kill World Record</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>Sack Boy's Big Adventure</td>
+                        <td>2x Top 10 Speedrun Placement</td>
+                        <td>2022 - 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Hollow Knight</td>
+                        <td>100% Completed the Game</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Fortnite</td>
+                        <td>10x 'Unreal' Ranked</td>
+                        <td>2023 - Current</td>
+                    </tr>
+                    <tr>
+                        <td>Valorant</td>
+                        <td>Peak Rank 'Immortal 3'</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Fortnite</td>
+                        <td>World Cup Semi-Finalist</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td>Fortnite</td>
+                        <td>Top 30,000 Global Ranking</td>
+                        <td>Current</td>
+                    </tr>
+                    <tr>
+                        <td>Minecraft</td>
+                        <td>Sub 20min Speedrun</td>
+                        <td>2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Drumming video clip -->
+        <div class="container">
+            <h2 class="header">Drumming Clip</h2> <!-- Section header for video -->
+            <!-- Embedded video demonstrating this hobby -->
+            <video width="100%" controls>
+                <source src="media/drum_clip.mov" type="video/mp4"> <!-- Drumming video file -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+
+</html>

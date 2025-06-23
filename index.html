@@ -1,176 +1,61 @@
-<!DOCTYPE html> <!-- Part of boiler plate code; Declares that this is an HTML5 document -->
+<!DOCTYPE html> <!-- Declares HTML5 document -->
 <html lang="en-us">
-<!-- Sets the language of the page for accessibility and SEO -->
+<!-- Sets page language for accessibility and SEO -->
 
 <head>
-    <meta charset="UTF-8"> <!-- Defines the character encoding to ensure proper text display -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Makes the page responsive on mobile devices -->
-    <title>About Keon Bushman</title> <!-- Sets the page's title that shows in the browser tab -->
+    <!-- Ensures responsiveness on all devices -->
+    <title>About Keon Bushman</title> <!-- Browser tab title -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Load Roboto font from Google Fonts -->
 </head>
 
-<!-- CSS styles for the entire page -->
-<style>
-    /* Styles the main title at the top of the page (my name) */
-    .title {
-        display: inline-block;
-        /* Allows the title to take up only as much width as needed */
-        padding: 10px 30px;
-        /* Adds space inside the pill around the text */
-        background-color: #444;
-        /* Dark gray background color */
-        color: white;
-        /* White text */
-        border-radius: 999px;
-        /* Makes it a fully rounded pill */
-        font-size: 28px;
-        /* Makes the font large */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        /* Adds a subtle drop shadow */
-        margin: 20px auto;
-        /* Adds spacing around the element */
-    }
-
-    /* Styles the horizontal navigation bar */
-    .navbar {
-        background-color: #333;
-        /* Darker gray background */
-        padding: 10px 20px;
-        /* Padding inside the navbar */
-        display: flex;
-        /* Lays out the items in a row */
-        justify-content: center;
-        /* Centers all nav items horizontally */
-        gap: 100px;
-        /* Spaces out each link evenly */
-    }
-
-    /* Styles each link in the navigation bar */
-    .navbar a {
-        color: white;
-        /* White text */
-        text-decoration: none;
-        /* Removes the underline */
-        font-weight: bold;
-        /* Makes the text bold */
-    }
-
-    /* Adds underline when hovering over links */
-    .navbar a:hover {
-        text-decoration: underline;
-    }
-
-    /* Styles the "So, who am I?" heading bubble */
-    .header {
-        display: inline-block;
-        /* Makes it fit its content width */
-        padding: 20px 50px;
-        /* Space around the text */
-        background-color: #444;
-        /* Dark background */
-        color: white;
-        /* White text */
-        border-radius: 999px;
-        /* Fully rounded edges */
-        font-size: 28px;
-        /* Bigger font for emphasis */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        /* Soft shadow */
-        margin-top: 50px;
-        /* Adds space above it inside the about bubble */
-    }
-
-    /* Styles the white bubble that contains all about me info */
-    .about {
-        display: inline-block;
-        /* Makes the bubble wrap content cleanly */
-        padding: 0px 50px;
-        /* Horizontal padding inside the bubble */
-        background-color: white;
-        /* White background to make it pop */
-        border-radius: 50px;
-        /* Rounded edges */
-        color: #444;
-        /* Text color inside the bubble */
-        font-size: 22px;
-        /* Slightly larger than default text size */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        /* Soft outer shadow */
-        margin-left: 40px;
-        /* Pushes the whole bubble away from the left */
-        margin-top: 30px;
-        /* Adds space above it */
-        margin-bottom: 30px;
-        /* Adds space below it */
-        width: calc(100% - 690px);
-        /* Sets the width of the bubble based on the screen size.
-        Subtracts the image width (500px) plus extra margin (190px) so it fills the space next to the image */
-        max-width: 100%;
-        /* Makes sure the bubble never overflows its container, even on smaller screens */
-        height: auto;
-        /* Automatically adjusts height to fit content */
-    }
-
-    /* Applies general spacing and font to the whole page */
-    body {
-        padding: 0 200px;
-        /* Adds left and right space on the page for layout */
-        font-family: roboto;
-        /* Uses the Roboto font (only works if loaded from Google Fonts or installed) */
-    }
-</style>
-
-<body style="background-color: rgb(201, 201, 201);">
-    <!-- Sets the background color of the whole page -->
-
-    <!-- Title centered at the top of the page -->
-    <div style="text-align: center;">
-        <h1 class="title">
-            Keon Bushman's Portfolio
-        </h1>
+<body>
+    <!-- Top title bar with centered heading -->
+    <div class="centered">
+        <h1 class="title">Keon Bushman's Portfolio</h1> <!-- Site title -->
     </div>
 
-    <!-- Navigation bar with links to other sections of the site -->
+    <!-- Main navigation bar with links to all site sections -->
     <nav class="navbar">
-        <a href="#about">About Me</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#career">Career</a>
-        <a href="#projects">Projects</a>
-        <a href="#projects">Beliefs</a>
-        <a href="#contact">Contact</a>
+        <a href="/index.html">About Me</a> <!-- Link to current page -->
+        <a href="/hobbies.html">Hobbies</a> <!-- Link to hobbies page -->
+        <a href="#career">Career</a> <!-- Placeholder for future section -->
+        <a href="#projects">Projects</a> <!-- Placeholder for future section -->
+        <a href="#beliefs">Beliefs</a> <!-- Placeholder for future section -->
+        <a href="#contact">Contact</a> <!-- Placeholder for future section -->
     </nav>
 
-    <!-- My personal image floated to the right of the text bubble -->
-    <img src="images/IMG_1.png" alt="Keon leaning against a brick wall"
-        style="float: right; width: 500px; height: 667px; margin-left: 20px; margin-top: 30px;">
+    <!-- Flexbox layout for about text and profile image -->
+    <div class="about-flex">
+        <!-- White bubble container for about me text -->
+        <div class="about match-height">
+            <h2 class="header">So, who am I?</h2> <!-- Section header -->
+            <p>
+                My name is Keon Bushman. I am a student at Grand Canyon University studying for my Bachelors of Science
+                in Software Development. I live in Grants Pass Oregon where I am working in I.T. Operations as a Help
+                Desk Technician at Fire Mountain Gems and Beads. I plan to continue pursuing a career centered around
+                all things technology.
+                <br><br>
+                But enough about my career; I have some hobbies too. I really enjoy playing video games
+                and competing in professional tournaments. I play chess, solve Rubik's puzzles, and like collecting
+                retro games and Pop! Figures! And aside from all of my nerdy hobbies, I also have a passion for playing
+                the drums.
+                <br><br>
+                Most importantly of all though, I am non-denomination Christian. I study apologetics and work on
+                strengthening my faith and walk with God whenever and however I can. I also serve at my local church as
+                a Middle School small group leader. That's just the gist of who I am, feel free to learn more about me
+                throughout my site!
+            </p>
+        </div>
 
-    <!-- Main "about me" bubble containing the heading and paragraph -->
-    <div class="about">
-        <h2 class="header">
-            So, who am I?
-        </h2>
-        <p>
-            <!-- This section is the actual content about who I am -->
-            My name is Keon Bushman. I am a student at Grand Canyon University studying for my Bachelors of Science in
-            Software Development. I live in Grants Pass Oregon where I am working in I.T. Operations as a Help Desk
-            Technician at Fire Mountain Gems and Beads. I plan to continue pursuing a career centered around all things
-            technology.
-
-            <br><br>
-
-            But enough about my career; I have some hobbies too. I really enjoy playing video games
-            and competing in professional tournaments. I play chess, solve Rubik's puzzles, and like collecting retro
-            games and Pop! Figures! And aside from all of my nerdy hobbies, I also have a passion for playing the drums.
-
-            <br><br>
-
-            Most importantly of all though, I am non-denomination Christian. I study apologetics and work on
-            strengthening my faith and walk with God whenever and however I can. I also serve at my local church as a
-            Middle School small group leader. That's just the gist of who I am, feel free to learn more about me
-            throughout my site!
-        </p>
+        <!-- Image wrapper that aligns photo beside the about section -->
+        <div class="image-wrapper">
+            <img src="images/IMG_1.png" alt="Keon leaning against a brick wall"> <!-- Profile image -->
+        </div>
     </div>
-
 </body>
 
 </html>

@@ -1,60 +1,30 @@
-<!DOCTYPE html> <!-- Tells the browser that this is an HTML5 document -->
+<!DOCTYPE html> <!-- Declares HTML5 document -->
 <html lang="en-us">
-<!-- Sets the language of the page to English (U.S.) -->
+<!-- Sets page language for accessibility and SEO -->
 
 <head>
-  <meta charset="UTF-8"> <!-- Ensures the text displays correctly using UTF-8 encoding -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Makes the page responsive so it adjusts on phones and smaller screens -->
-  <title>Page Not Found</title> <!-- Sets the tab title in the browser -->
-
-  <!-- Internal CSS styling for this specific page -->
-  <style>
-    /* Styles the whole body of the page */
-    body {
-      font-family: Arial, sans-serif;
-      /* Sets the font style */
-      text-align: center;
-      /* Centers all the content horizontally */
-      padding: 80px;
-      /* Adds spacing inside the body so content doesn't touch the edges */
-      background-color: #f8f8f8;
-      /* Light gray background to give it a clean look */
-    }
-
-    /* Styles the large 404 heading */
-    h1 {
-      font-size: 48px;
-      /* Makes the heading big and easy to see */
-      color: #333;
-      /* Dark gray text color */
-    }
-
-    /* Styles the smaller paragraph text */
-    p {
-      font-size: 18px;
-      /* Slightly larger than normal paragraph text */
-    }
-
-    /* Styles the "Back to homepage" link */
-    a {
-      color: #0066cc;
-      /* Blue link color */
-      text-decoration: none;
-      /* Removes the underline to make it look cleaner */
-    }
-  </style>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsiveness on all devices -->
+  <title>Page Not Found</title> <!-- Page title shown in browser tab -->
+  <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Load Roboto font from Google Fonts -->
 </head>
 
-<body>
-  <!-- Main error message shown when someone visits a missing or wrong page -->
-  <h1>404 - Page Not Found</h1>
+<body class="centered-page">
+  <!-- Use flexbox class to center all page content -->
+  <!-- Standard white bubble container for error message -->
+  <div class="about centered" style="max-width: 700px;">
+    <h2 class="header">404 - Page Not Found</h2> <!-- Header displaying error -->
 
-  <!-- Explanation of the error -->
-  <p>Oops! The page you're looking for doesn't exist.</p>
+    <p style="margin-top: 30px;">
+      Oops! The page you're looking for doesn't exist or might have been moved.
+    </p>
 
-  <!-- Link back to the main homepage of the site -->
-  <p><a href="index.html">Go back to the homepage</a></p>
+    <p style="margin-top: 20px;">
+      <a href="/index.html" class="return-link">Return to the homepage</a> <!-- Styled link back to homepage -->
+    </p>
+  </div>
 </body>
 
 </html>
