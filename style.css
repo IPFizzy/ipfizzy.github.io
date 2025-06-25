@@ -1,13 +1,17 @@
 /* === General Page Setup === */
 body {
-    background-color: rgb(201, 201, 201);
-    /* Light gray background for contrast */
+    margin: 0;
+    /* Remove default browser margin */
     padding: 0 20px;
     /* Horizontal spacing for content */
     font-family: 'Roboto', sans-serif;
-    /* Consistent sans-serif font */
-    margin: 0;
-    /* Remove default browser margin */
+    /* Use Roboto font for consistency across the site */
+    background: linear-gradient(-45deg, #ff6b6b, #f7d794, #70a1ff, #7bed9f);
+    /* Animated gradient background - Sets up the four-color gradient moving diagonally */
+    background-size: 400% 400%;
+    /* Enlarges the background to allow for smoother animation */
+    animation: gradientBG 20s ease infinite;
+    /* Runs the animation continuously with easing */
 }
 
 /* === Full-Page Centering for 404 Page === */
@@ -283,4 +287,22 @@ body {
 .table tr:hover {
     background-color: #f1f1f1;
     /* Light background on hover */
+}
+
+/* === Animated Background Keyframes === */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+        /* Start the gradient at the far left */
+    }
+
+    50% {
+        background-position: 100% 50%;
+        /* Move the gradient fully to the right */
+    }
+
+    100% {
+        background-position: 0% 50%;
+        /* Bring it back to the start for looping */
+    }
 }
