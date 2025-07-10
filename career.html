@@ -1,0 +1,156 @@
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html lang="en">
+<!-- Sets page language -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsiveness -->
+    <title>Career</title> <!-- Browser tab title -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Load Roboto font from Google Fonts -->
+</head>
+
+<!-- Internal CSS for this page -->
+<style>
+    body {
+        margin-bottom: 100px;
+        /* Bottom body margin for easier readability */
+    }
+</style>
+
+<body>
+    <!-- Title bar at top of the page -->
+    <div class="centered">
+        <h1 class="title">Keon Bushman's Hobbies</h1>
+    </div>
+
+    <!-- Navigation bar with internal anchor links -->
+    <nav class="navbar">
+        <a href="/index.html">About Me</a> <!-- Link to About Me page -->
+        <a href="/hobbies.html">Hobbies</a> <!-- Link to Hobbies page -->
+        <a href="/career.html">Career</a> <!-- Link to Career Page -->
+        <a href="/projects.html">Projects</a> <!-- Link to Projects Page -->
+        <a href="#beliefs">Beliefs</a> <!-- Placeholder for future content -->
+        <a href="#contact">Contact</a> <!-- Placeholder for future content -->
+    </nav>
+
+    <!-- Flex container that holds the white career text and image side-by-side -->
+    <div class="about-flex">
+        <!-- White bubble containing all career content in one container -->
+        <div class="about match-height">
+            <!-- Current section with its own header and paragraph -->
+            <h2 class="header">Current</h2>
+            <p>
+                I currently work in Information Technology Operations as a Help Desk Technician at Fire Mountain Gems
+                and Beads. I started this position around mid April as a sudo promotion from my internship at the same
+                company (more on that in the "Past" section below). My day to day job is receiving user tickets that
+                include tech issues, projects, requests, and much more. I take these tickets and direct them to whoever
+                specializes in the issue on the I.T. team. All of the miscellaneous tickets however, I take care of.
+                This includes working with the user's software and hardware, assisting with account issues, building
+                workstations, patching systems, and so on.
+            </p>
+
+            <!-- Container to hold Past and Future side-by-side -->
+            <div class="side-by-side">
+                <!-- Left column for Past section -->
+                <div class="column">
+                    <h2 class="header">Past</h2>
+                    <p>
+                        Prior to my Help Desk position I worked in Digital Sales as an intern also at Fire Mountain
+                        Gems. I worked on a big assortment of projects during my time in this position. Most of it was
+                        physical file cleanup which turned to digital cleanup. A lot of my work was done in Word and
+                        Excel; I worked on data entry, cost and data analysis, build promotional emails, and even worked
+                        on SEO for the company's website and social media.
+                    </p>
+                </div>
+
+                <!-- Right column for Future section -->
+                <div class="column">
+                    <h2 class="header">Future</h2>
+                    <p>
+                        I plan to continue working in I.T. at my current position as it is teaching me so much about the
+                        field. Looking further in the future, I plan to stay in a position anywhere that I can get my
+                        hands on technology. As I further my career, I am now in the position to hunt for jobs within my
+                        specialty. I don't have a dream job in mind yet, instead I hope to experience a variety of jobs
+                        until I settle into a position that feels right.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Static image aligned to right -->
+        <div class="image-wrapper">
+            <img src="images/IMG_3.png" alt="Keon resting chin on fist looking into the camera"> <!-- Career image -->
+        </div>
+    </div>
+
+    <!-- === Centered Feature Intro Bubble === -->
+    <!-- Flex wrapper to horizontally center the bubble -->
+    <div style="display: flex; justify-content: center; margin-top: 50px;">
+        <!-- Reuses existing .about for bubble styling and .centered for text alignment -->
+        <div class="about centered" style="max-width: 800px;">
+            <h2 class="header">Specialty & Experience</h2> <!-- Header styled like the rest of the site -->
+            <p>
+                <!-- Short paragraph introducing the feature section -->
+                I specialize in building computer systems, documenting network ports, and troubleshooting any hardware
+                and software issues thanks to my current job experience. I also intend to specialize in programming and
+                software development with my current experience in HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- === Expandable Icon Feature Section === -->
+    <!-- Container holding the entire expandable features area -->
+    <div class="feature-section">
+
+        <!-- Row of 3 interactive icon boxes -->
+        <div class="feature-row">
+
+            <!-- === Feature Box 1 === -->
+            <div class="feature-box">
+                <!-- Icon shown by default -->
+                <div class="feature-icon">💼</div>
+
+                <!-- Content revealed on hover -->
+                <div class="feature-content">
+                    <h3>Me as an employee</h3>
+                    <p>I have always been an externally hard worker, striving to accomplish anything I set my mind to.
+                        This carries into my work ethic to learn, complete tasks, and take initiative.</p>
+                </div>
+            </div>
+
+            <!-- === Feature Box 2 === -->
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-content">
+                    <h3>Me as a learner</h3>
+                    <p>I will always be a lifelong learner, taking on any opportunity to further my education and
+                        knowledge base. I accept honest correction openly understanding that this is a necessary
+                        step in growing knowledge in a field.</p>
+                </div>
+            </div>
+
+            <!-- === Feature Box 3 === -->
+            <div class="feature-box">
+                <div class="feature-icon">👥</div>
+                <div class="feature-content">
+                    <h3>Me as a coworker</h3>
+                    <p>I am quick to acklamate to new enviornments, understanding the need to work in a team to achieve
+                        success in a company. I have a willingness to not only work with but also build relationships
+                        with my coworkers.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Text prompt below icons to indicate interactivity -->
+        <p class="text-pulse">Hover for more info</p>
+    </div>
+
+</body>
+
+</html>

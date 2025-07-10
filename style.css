@@ -3,306 +3,472 @@ body {
     margin: 0;
     /* Remove default browser margin */
     padding: 0 20px;
-    /* Horizontal spacing for content */
+    /* Add horizontal padding for spacing */
     font-family: 'Roboto', sans-serif;
-    /* Use Roboto font for consistency across the site */
+    /* Apply Roboto font to entire site */
     background: linear-gradient(-45deg, #ff6b6b, #f7d794, #70a1ff, #7bed9f);
-    /* Animated gradient background - Sets up the four-color gradient moving diagonally */
+    /* Animated diagonal background gradient */
     background-size: 400% 400%;
-    /* Enlarges the background to allow for smoother animation */
+    /* Expand background to allow smooth animation */
     animation: gradientBG 20s ease infinite;
-    /* Runs the animation continuously with easing */
+    /* Loop the gradient movement forever */
 }
 
-/* === Full-Page Centering for 404 Page === */
+/* === 404 Page Centering === */
 .centered-page {
     display: flex;
-    /* Flexbox layout for centering */
+    /* Use flexbox for layout */
     justify-content: center;
-    /* Horizontal centering */
+    /* Center horizontally */
     align-items: center;
-    /* Vertical centering */
+    /* Center vertically */
     height: 100vh;
-    /* Full viewport height */
+    /* Take up full viewport height */
     padding: 0;
-    /* Remove inherited body padding */
+    /* Reset padding */
     margin: 0;
-    /* Remove default body margin */
+    /* Reset margin */
 }
 
-/* === Adjust .about container specifically for 404 === */
 .centered-page .about {
     height: auto;
-    /* Allow height to shrink to content */
+    /* Let height adjust to content */
     margin: 0;
-    /* Remove default margin if any */
+    /* Remove extra margin */
 }
 
-/* === Utility: Center Align Text === */
+/* === Utility Classes === */
 .centered {
     text-align: center;
-    /* Center all child text content */
+    /* Center-align text */
 }
 
-/* === Site Title Styling === */
-.title {
+.full-width {
+    width: 100%;
+    /* Full container width */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+/* === Title and Header Styling === */
+.title,
+.header {
     display: inline-block;
-    /* Shrink to fit content */
-    padding: 10px 30px;
-    /* Space inside the title badge */
+    /* Only take up as much width as needed */
+    padding: 20px 50px;
+    /* Internal spacing for readability */
     background-color: #444;
     /* Dark gray background */
     color: white;
-    /* Light text for contrast */
+    /* White text for contrast */
     border-radius: 999px;
-    /* Full pill-style roundness */
+    /* Fully rounded pill shape */
     font-size: 28px;
-    /* Large, readable size */
+    /* Large font for emphasis */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Soft glow effect */
-    margin: 20px auto;
-    /* Center with top spacing */
+    /* Soft drop shadow */
 }
 
-/* === Navigation Bar Container === */
+.title {
+    padding: 10px 30px;
+    /* Slightly smaller padding for title */
+    margin: 20px auto;
+    /* Vertical spacing and center alignment */
+}
+
+.header {
+    margin-top: 30px;
+    /* Space above section headers */
+}
+
+/* === Navigation Bar === */
 .navbar {
     background-color: #333;
-    /* Dark background for nav */
+    /* Dark background color */
     padding: 10px 20px;
-    /* Inner spacing around links */
+    /* Inner spacing for nav container */
     display: flex;
-    /* Flex layout for alignment */
+    /* Horizontal flex layout */
     justify-content: center;
-    /* Center all nav items */
+    /* Center nav links */
     flex-wrap: wrap;
-    /* Allow items to wrap on small screens */
+    /* Allow wrapping on smaller screens */
     gap: 60px;
-    /* Space between nav items */
+    /* Space between links */
 }
 
-/* === Individual Nav Links === */
 .navbar a {
     color: white;
     /* White link text */
     text-decoration: none;
-    /* Remove default underline */
+    /* Remove underlines */
     font-weight: bold;
-    /* Emphasize links */
+    /* Bold links for emphasis */
 }
 
 .navbar a:hover {
     text-decoration: underline;
-    /* Add underline on hover */
+    /* Underline on hover for feedback */
 }
 
-/* === Section Header Styling (Primary and Secondary) === */
-.header {
-    display: inline-block;
-    /* Fit width to content */
-    padding: 20px 50px;
-    /* Inner spacing */
-    background-color: #444;
-    /* Dark background for contrast */
-    color: white;
-    /* White text */
-    border-radius: 999px;
-    /* Fully rounded */
-    font-size: 28px;
-    /* Consistent readable size */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Shadow for depth */
-    margin-top: 30px;
-    /* Space above each header */
-}
-
-/* === Main Text Bubble Container === */
-.about {
+/* === Main Content Containers === */
+.about,
+.bubble {
     padding: 30px 40px;
-    /* Inner padding */
+    /* Internal spacing for content */
     background-color: white;
     /* White bubble background */
     border-radius: 50px;
-    /* Rounded corners */
+    /* Fully rounded corners */
     color: #444;
-    /* Text color */
+    /* Dark gray text */
     font-size: 20px;
-    /* Larger body text */
+    /* Slightly larger text for readability */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Outer shadow */
+    /* Outer shadow for depth */
+}
+
+.about {
     flex: 1;
-    /* Fill available space in flexbox */
+    /* Allow content to grow */
     height: 100%;
-    /* Stretch height to match image if needed */
+    /* Fill vertical space */
 }
 
-/* === Flex Layout for About Me + Image Section === */
-.about-flex {
-    display: flex;
-    /* Flexbox layout */
-    flex-wrap: wrap;
-    /* Wrap on small screens */
-    align-items: flex-start;
-    /* Align top of children */
-    gap: 30px;
-    /* Space between text and image */
-    margin-top: 30px;
-    /* Space above this block */
-}
-
-/* === Wrapper for Static Image beside Text === */
-.image-wrapper {
-    flex-shrink: 0;
-    /* Prevent shrinking */
-    max-width: 500px;
-    /* Cap max width */
-}
-
-.image-wrapper img {
-    width: 100%;
-    /* Responsive width */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-    /* Prevent layout shifts */
-    border-radius: 20px;
-    /* Rounded image corners */
-}
-
-/* === Bubble Section for Hobby Videos === */
 .bubble {
     display: flex;
-    /* Flex layout for side-by-side videos */
+    /* Use flex layout */
     justify-content: center;
-    /* Center inside container */
+    /* Center content horizontally */
     align-items: flex-start;
-    /* Align items to top */
+    /* Align top of each item */
     gap: 40px;
-    /* Gap between video blocks */
+    /* Space between flex items */
     flex-wrap: wrap;
     /* Wrap on smaller screens */
-    padding: 40px;
-    /* Inner spacing */
-    background-color: white;
-    /* White background bubble */
-    border-radius: 50px;
-    /* Fully rounded container */
-    color: #444;
-    /* Text color */
-    font-size: 20px;
-    /* Font size for any text */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Soft shadow */
     margin: 40px auto;
-    /* Space above/below and center horizontally */
+    /* Vertical spacing and center alignment */
 }
 
-/* === Full Width Helper Class === */
-.full-width {
-    width: 100%;
-    /* Expand to full container width */
-    box-sizing: border-box;
-    /* Include padding in width calc */
-}
-
-/* === Video Container Styling === */
-.container {
-    flex: 1 1 500px;
-    /* Responsive flex sizing */
+/* === Flex Layouts === */
+.about-flex,
+.feature-row,
+.side-by-side {
     display: flex;
-    /* Stack vertically */
+    /* Use flexbox layout */
+    flex-wrap: wrap;
+    /* Enable wrapping */
+    gap: 30px;
+    /* Default gap between elements */
+    margin-top: 30px;
+    /* Top spacing */
+}
+
+.feature-row {
+    justify-content: center;
+    /* Center icons horizontally */
+    gap: 120px;
+    /* Wider spacing between features */
+}
+
+.side-by-side {
+    gap: 40px;
+    /* Space between columns */
+}
+
+.side-by-side .column,
+.container {
+    flex: 1 1 300px;
+    /* Allow grow/shrink, base size 300px */
+    min-width: 280px;
+    /* Prevent content from shrinking too small */
+    display: flex;
+    /* Stack items inside */
     flex-direction: column;
-    /* Vertical layout */
+    /* Stack content vertically */
     align-items: center;
-    /* Center content horizontally */
+    /* Center-align children */
 }
 
 .container video {
     width: 100%;
-    /* Fill container */
+    /* Make video full width */
     height: auto;
-    /* Keep aspect ratio */
+    /* Keep video ratio */
     max-width: 100%;
     /* Prevent overflow */
 }
 
-/* === Return Link on 404 Page === */
-.return-link {
-    color: #0066cc;
-    /* Standard blue link color */
-    font-weight: bold;
-    /* Bold for emphasis */
-    text-decoration: none;
-    /* Remove underline initially */
-    transition: color 0.2s ease, text-decoration 0.2s ease;
-    /* Smooth hover effect */
+/* === Images === */
+.image-wrapper {
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    max-width: 500px;
+    /* Cap image width */
 }
 
-.return-link:hover {
-    color: #004499;
-    /* Darker blue on hover */
-    text-decoration: underline;
-    /* Add underline on hover */
+.image-wrapper img {
+    width: 100%;
+    /* Responsive image size */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Prevent extra space */
+    border-radius: 20px;
+    /* Round image corners */
 }
 
-/* === Styled Table to Match Site Aesthetics === */
+/* === Table Styling === */
 .table {
     width: 90%;
-    /* Table spans most of the page width */
+    /* Table takes most of the container width */
     margin: 40px auto;
-    /* Center the table with spacing above and below */
+    /* Vertical spacing, center alignment */
     border-collapse: collapse;
-    /* Remove spacing between table borders */
+    /* Remove spacing between borders */
     border-radius: 20px;
     /* Rounded corners */
     overflow: hidden;
-    /* Prevent border rounding from being cut off */
+    /* Keep rounding visible */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    /* Soft shadow for depth */
+    /* Table shadow */
     font-family: 'Roboto', sans-serif;
-    /* Match font with rest of site */
+    /* Match site font */
     background-color: white;
-    /* White background for readability */
+    /* Table background */
 }
 
-/* === Table Cell and Header Styling === */
 .table th,
 .table td {
     padding: 12px 16px;
-    /* Inner spacing inside cells */
+    /* Cell spacing */
     border-bottom: 1px solid #ddd;
-    /* Light gray separator lines */
+    /* Light row divider */
     text-align: left;
-    /* Align text to the left */
+    /* Align text to left */
 }
 
-/* === Table Header Styling === */
 .table th {
     background-color: #333;
-    /* Dark background for contrast */
+    /* Dark header background */
     color: #fff;
     /* White text */
 }
 
-/* === Hover Effect for Table Rows === */
 .table tr:hover {
     background-color: #f1f1f1;
-    /* Light background on hover */
+    /* Light gray on hover */
+}
+
+/* === Return Link === */
+.return-link {
+    color: #0066cc;
+    /* Blue text */
+    font-weight: bold;
+    /* Bold text */
+    text-decoration: none;
+    /* No underline by default */
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    /* Smooth hover transition */
+}
+
+.return-link:hover {
+    color: #004499;
+    /* Darker blue */
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* === Feature Section === */
+.feature-section {
+    margin-top: 60px;
+    /* Top spacing */
+    text-align: center;
+    /* Center content */
+    color: #444;
+    /* Dark gray text */
+}
+
+.text-pulse {
+    margin-top: 20px;
+    /* Space above */
+    font-size: 16px;
+    /* Font size */
+    opacity: 0.6;
+    /* Faded look */
+    animation: pulse 2s infinite;
+    /* Continuous pulse animation */
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        /* Dim */
+    }
+
+    50% {
+        opacity: 1;
+        /* Brighten */
+    }
+}
+
+.feature-box {
+    background-color: white;
+    /* White background */
+    border-radius: 20px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    width: 120px;
+    /* Start width */
+    padding: 20px;
+    /* Inner spacing */
+    overflow: hidden;
+    /* Hide overflowing text */
+    transition: width 0.4s ease, background-color 0.3s ease;
+    /* Smooth expansion */
+    position: relative;
+    /* Anchor child content */
+    text-align: center;
+    /* Center text */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+.feature-icon {
+    font-size: 36px;
+    /* Large emoji size */
+    margin-bottom: 10px;
+    /* Space below icon */
+}
+
+.feature-content {
+    opacity: 0;
+    /* Initially hidden */
+    max-height: 0;
+    /* Collapse height */
+    overflow: hidden;
+    /* Prevent scrollbars */
+    transition: opacity 0.3s ease, max-height 0.4s ease;
+    /* Smooth reveal */
+}
+
+.feature-box:hover {
+    width: 250px;
+    /* Expand on hover */
+    background-color: #f9f9f9;
+    /* Light background */
+}
+
+.feature-box:hover .feature-content {
+    opacity: 1;
+    /* Show text */
+    max-height: 200px;
+    /* Reveal max height */
+}
+
+/* Flex container for 2-row icon grid (4 per row) */
+.icon-grid {
+    display: grid;
+    /* Use CSS grid layout */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 equal-width columns */
+    gap: 40px;
+    /* Space between icons */
+    max-width: 1000px;
+    /* Cap the width */
+    margin: 40px auto;
+    /* Vertical spacing and center alignment */
+    text-align: center;
+    /* Center icon content */
+}
+
+/* Adjust icon size and layout */
+.icon-item {
+    font-family: 'Roboto', sans-serif;
+    /* Match global font */
+    display: flex;
+    /* Flex column layout */
+    flex-direction: column;
+    /* Stack icon and text */
+    align-items: center;
+    /* Center-align contents */
+    color: #444;
+    /* Dark gray text */
+    font-weight: bold;
+    /* Make font bold */
+}
+
+.icon-item i {
+    font-size: 36px;
+    /* Icon size */
+    margin-bottom: 8px;
+    /* Space below icon */
+    font-style: normal;
+    /* Remove italic style from <i> tags */
+}
+
+.project-hero {
+    display: flex;
+    /* Use flexbox to control alignment */
+    justify-content: center;
+    /* Center horizontally */
+    margin-top: 60px;
+    /* Space above */
+}
+
+/* Grid layout for 2x2 features beside mockup */
+.feature-layout {
+    display: flex;
+    /* Horizontal layout for features and mockup */
+    flex-wrap: wrap;
+    /* Allow wrapping if screen is small */
+    justify-content: center;
+    /* Center the whole block */
+    gap: 60px;
+    /* Space between feature group and mockup */
+    max-width: 1200px;
+    /* Limit overall width */
+    margin: 60px auto;
+    /* Space above and below, center it */
+}
+
+/* Inner grid just for the 4 features (2x2 layout) */
+.feature-grid {
+    display: grid;
+    /* Use CSS grid for feature cards */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 30px;
+    /* Space between cards */
+    max-width: 600px;
+    /* Limit width of card area */
+}
+
+/* Existing feature cards reused */
+.feature-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* === Animated Background Keyframes === */
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
-        /* Start the gradient at the far left */
+        /* Start from left */
     }
 
     50% {
         background-position: 100% 50%;
-        /* Move the gradient fully to the right */
+        /* Move to right */
     }
 
     100% {
         background-position: 0% 50%;
-        /* Bring it back to the start for looping */
+        /* Return to left */
     }
 }
