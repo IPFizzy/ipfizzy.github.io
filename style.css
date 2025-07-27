@@ -2,8 +2,6 @@
 body {
     margin: 0;
     /* Remove default browser margin */
-    padding: 0 20px;
-    /* Add horizontal padding for spacing */
     font-family: 'Roboto', sans-serif;
     /* Apply Roboto font to entire site */
     background: linear-gradient(-45deg, #ff6b6b, #f7d794, #70a1ff, #7bed9f);
@@ -471,4 +469,114 @@ body {
         background-position: 0% 50%;
         /* Return to left */
     }
+}
+
+/* === Greeting Bubble === */
+.greeting-bubble {
+    max-width: 500px;
+    /* Limit width of bubble */
+    margin: 30px auto 30px auto;
+    /* Vertical spacing and center alignment */
+    text-align: center;
+    /* Center-align greeting text */
+    background-color: #444;
+    /* Dark gray background */
+    border-radius: 50px;
+    /* Rounded corners */
+    color: white;
+    /* White text */
+    font-size: 28px;
+    /* Large text size */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Subtle drop shadow */
+    border-radius: 999px;
+    /* Fully pill-shaped */
+    font-weight: bold;
+    /* Bold text */
+}
+
+/* === Bible Verse Popup === */
+.verse-popup {
+    position: absolute;
+    /* Position popup relative to page */
+    background-color: white;
+    /* Match white site background */
+    color: #333;
+    /* Dark gray text */
+    font-size: 16px;
+    /* Readable font size */
+    max-width: 300px;
+    /* Cap popup width */
+    padding: 16px 20px;
+    /* Inner spacing */
+    border-radius: 16px;
+    /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Soft drop shadow */
+    z-index: 999;
+    /* Ensure popup sits above other content */
+    display: flex;
+    /* Use flex layout for text and button */
+    flex-direction: column;
+    /* Stack contents vertically */
+    gap: 10px;
+    /* Space between text and close button */
+}
+
+/* Close button inside popup */
+.verse-popup .close-btn {
+    background: #444;
+    /* Dark gray button background */
+    color: white;
+    /* White text */
+    border: none;
+    /* Remove default button border */
+    border-radius: 999px;
+    /* Fully rounded shape */
+    padding: 6px 10px;
+    /* Internal button spacing */
+    font-size: 14px;
+    /* Button text size */
+    align-self: flex-end;
+    /* Align button to top right of popup */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background 0.2s ease;
+    /* Smooth hover transition */
+}
+
+.verse-popup .close-btn:hover {
+    background: #222;
+    /* Darker on hover */
+}
+
+/* === Custom Nav Buttons === */
+.nav-btn {
+    margin: 0 8px;
+    /* Even spacing between nav buttons */
+    padding: 8px 18px;
+    /* Button padding for clickable area */
+    border: 2px solid #fff;
+    /* White border around each button */
+    color: #fff;
+    /* White text color */
+    border-radius: 50px;
+    /* Fully rounded button shape */
+    text-decoration: none;
+    /* Remove underline */
+    transition: all 0.25s ease;
+    /* Smooth hover transition */
+    font-weight: 500;
+    /* Medium font weight */
+    display: inline-block;
+    /* Display like buttons in a row */
+}
+
+.nav-btn:hover {
+    background-color: #fff;
+    /* Fill background on hover */
+    color: #212529;
+    /* Switch text color to dark */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+    /* Subtle white glow on hover */
 }

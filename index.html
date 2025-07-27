@@ -1,59 +1,94 @@
 <!DOCTYPE html> <!-- Declares HTML5 document -->
 <html lang="en-us">
-<!-- Sets page language for accessibility and SEO -->
+<!-- Sets page language -->
 
 <head>
     <meta charset="UTF-8"> <!-- Character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Ensures responsiveness on all devices -->
-    <title>About Keon Bushman</title> <!-- Browser tab title -->
-    <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- Load Roboto font from Google Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness -->
+    <title>Keon Bushman's Portfolio</title> <!-- Browser tab title -->
+
+    <!-- Load fonts and stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> <!-- Google Font -->
+    <link rel="stylesheet" href="style.css"> <!-- Main CSS -->
+    <script src="scripts.js" defer></script> <!-- JavaScript with greeting and verse logic -->
+
+    <!-- Bootstrap + jQuery libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <!-- Top title bar with centered heading -->
-    <div class="centered">
-        <h1 class="title">Keon Bushman's Portfolio</h1> <!-- Site title -->
-    </div>
 
-    <!-- Main navigation bar with links to all site sections -->
-    <nav class="navbar">
-        <a href="/index.html">About Me</a> <!-- Link to current page -->
-        <a href="/hobbies.html">Hobbies</a> <!-- Link to hobbies page -->
-        <a href="/career.html">Career</a> <!-- Link to Career Page -->
-        <a href="/projects.html">Projects</a> <!-- Link to Projects Page -->
-        <a href="#beliefs">Beliefs</a> <!-- Placeholder for future section -->
-        <a href="#contact">Contact</a> <!-- Placeholder for future section -->
-    </nav>
-
-    <!-- Flexbox layout for about text and profile image -->
-    <div class="about-flex">
-        <!-- White bubble container for about me text -->
-        <div class="about match-height">
-            <h2 class="header">So, who am I?</h2> <!-- Section header -->
-            <p>
-                My name is Keon Bushman. I am a student at Grand Canyon University studying for my Bachelors of Science
-                in Software Development. I live in Grants Pass Oregon where I am working in I.T. Operations as a Help
-                Desk Technician at Fire Mountain Gems and Beads. I plan to continue pursuing a career centered around
-                all things technology.
-                <br><br>
-                But enough about my career; I have some hobbies too. I really enjoy playing video games
-                and competing in professional tournaments. I play chess, solve Rubik's puzzles, and like collecting
-                retro games and Pop! Figures! And aside from all of my nerdy hobbies, I also have a passion for playing
-                the drums.
-                <br><br>
-                Most importantly of all though, I am non-denomination Christian. I study apologetics and work on
-                strengthening my faith and walk with God whenever and however I can. I also serve at my local church as
-                a Middle School small group leader. That's just the gist of who I am, feel free to learn more about me
-                throughout my site!
-            </p>
+    <!-- Top Navigation Bar with branding and page links -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between align-items-center">
+        <!-- Left: Brand -->
+        <div class="navbar-brand font-weight-bold mb-0 h1">
+            Keon Bushman's Portfolio
         </div>
 
-        <!-- Image wrapper that aligns photo beside the about section -->
-        <div class="image-wrapper">
-            <img src="images/IMG_1.png" alt="Keon leaning against a brick wall"> <!-- Profile image -->
+        <!-- Center: Nav Buttons -->
+        <div class="collapse navbar-collapse justify-content-left" id="navbarNav">
+            <div class="d-inline-flex flex-wrap gap-2">
+                <a href="/index.html" class="nav-btn">About Me</a>
+                <a href="/hobbies.html" class="nav-btn">Hobbies</a>
+                <a href="/career.html" class="nav-btn">Career</a>
+                <a href="/projects.html" class="nav-btn">Projects</a>
+                <a href="/beliefs.html" class="nav-btn">Beliefs</a>
+                <a href="/contact.html" class="nav-btn">Contact</a>
+            </div>
+        </div>
+
+        <!-- Right: Collapse toggler for small screens -->
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Greeting message shown dynamically based on time of day -->
+    <div id="greeting-bubble" class="greeting-bubble"></div>
+
+    <!-- Horizontal card holding about text and profile image -->
+    <div class="container my-5">
+        <div class="card shadow-lg border-0 rounded overflow-hidden">
+            <div class="row no-gutters">
+                <!-- Left Column: About Me Text -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="p-4">
+                        <h2 class="header mb-3">So, who am I?</h2>
+                        <p>
+                            My name is Keon Bushman. I am a student at Grand Canyon University studying for my Bachelors
+                            of Science
+                            in Software Development. I live in Grants Pass Oregon where I am working in I.T. Operations
+                            as a
+                            Help Desk Technician at Fire Mountain Gems and Beads. I plan to continue pursuing a career
+                            centered
+                            around all things technology.
+                            <br><br>
+                            But enough about my career; I have some hobbies too. I really enjoy playing video games
+                            and competing in professional tournaments. I play chess, solve Rubik's puzzles, and like
+                            collecting
+                            retro games and Pop! Figures! And aside from all of my nerdy hobbies, I also have a passion
+                            for playing
+                            the drums.
+                            <br><br>
+                            Most importantly of all though, I am a non-denominational Christian. I study apologetics and
+                            work on
+                            strengthening my faith and walk with God whenever and however I can. I also serve at my
+                            local church
+                            as a Middle School small group leader. That's just the gist of who I am, feel free to learn
+                            more about
+                            me throughout my site!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Profile Image -->
+                <div class="col-md-6">
+                    <img src="images/IMG_1.png" alt="Keon leaning against a brick wall"
+                        class="img-fluid w-100 rounded-right" style="object-fit: cover; aspect-ratio: 4 / 5;">
+                </div>
+            </div>
         </div>
     </div>
 </body>
